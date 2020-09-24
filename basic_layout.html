@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Website</title>
+		<link rel="stylesheet" type="text/css" href="basic_style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+		
+			// Hide and show effect
+			$(document).ready(function(){
+			$("input[title='empName']").keyup(function() {
+					$(".error").remove();
+					var inputVal = $(this).val();
+					var numericReg = /^\d*[0-9](|.\d*[0-9]|,\d*[0-9])?$/;
+					if(!numericReg.test(inputVal)) {
+					
+									
+						$(this).after('<span class="error">Numeric characters only.</span>');
+					}
+				});
+			 
+			 
+			 
+			 
+			 
+			//$("input[title='empName']").val("Hi");
+			
+			
+			
+					$("#hide").click(function(){
+						$("#me").hide();
+						});
+					$("#show").click(function(){
+					$("#me").show();
+			});
+			});
+			
+			//Button Animation
+			
+			$(document).ready(function(){
+			$("#name").click(function(){
+			var div = $("div");  
+			div.animate({left: '100px'}, "slow");
+			div.animate({fontSize: '3em'}, "slow");
+			});
+			});
+			
+		
+		</script>
+		
+	</head>
+	
+	<body>
+		
+			<button id="name"> Sonali Wagh </button>
+
+			<div class="div"
+			style="height:120px;width:200px;position:absolute;">Computer Engineer</div>
+	
+			<div class="header">
+				<h1>All about me </h1>
+			</div>
+
+			<div class="content">
+			<input title="This is the text of the tooltip" value="44"/>
+			<input type="text" title="empName" />
+			<p id="me">
+				<img src="girl.png" alt="A doodle girl" width="220" height="250">
+		
+				<br/> 	I am Sweet Sonali from Nashik.
+				<br/>	I wish to explore the field of software testing from my 					academic years.
+				<br/>	And the cherry on the cake was I got selected in Qspiders,
+				<br/>	Where I underwent training on Software Testing.</p>
+
+				<button id="hide">Don't want to see</button>
+				<button id="show">Let's see about me</button>
+			</div>
+			
+		
+		<h2>My Favorite Things: </h2>
+		<div class="tab">
+			<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Food</button>
+			<button class="tablinks" onclick="openCity(event, 'Paris')">Destination</button>
+			<button class="tablinks" onclick="openCity(event, 'Tokyo')">Color</button>
+		</div>
+
+		<div id="London" class="tabcontent">
+			<h3>Food</h3>
+			<p>“Everyone is in such a good mood when they've eaten well.” </p>
+			<ul>
+				<li>Chicken Biryani</li>
+				<li>Dark Chocolate</li>
+				<li>All Sweets</li>
+			</ul>
+		</div>
+
+		<div id="Paris" class="tabcontent">
+			<h3>Destination</h3>
+			<p>“She had a wild, wandering soul but when she loved, she loved with chaos and that made all the difference.” </p>
+			<ul>
+				<li>Le Ladakh</li>
+				<li>South Korea</li>
+				<li>Dubai</li>
+			</ul>
+		</div>
+
+		<div id="Tokyo" class="tabcontent">
+			<h3>Color</h3>
+			<p>“The soul becomes dyed with the color of its thoughts.”</p>
+			<ul>
+				<li>White</li>
+				<li>Black</li>
+				<li>Red</li>
+			</ul>
+		</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+		
+		<h2 style="color:powderblue;">My Family</h2>
+		
+		<table id="t01">
+			<tr style="color:green;">
+				<th>Name</th>
+				<th>Relation</th> 
+				<th>Occupation</th>
+			</tr>
+			
+			<tr>
+				<td>Digambar</td>
+				<td>Father</td>
+				<td>Govt. Employee</td>
+			</tr>
+			
+			<tr>
+				<td>Sunita</td>
+				<td>Mother</td>
+				<td>Social Worker</td>
+			</tr>
+			
+			<tr>
+				<td>Jayshree</td>
+				<td>Sister</td>
+				<td>Student</td>
+			</tr>
+			
+		</table>
+		
+		<div class="background-image"></div>
+
+	</body>
+</html> 
